@@ -1,0 +1,78 @@
+
+<html>
+    <style>
+        div {
+            background-color: lightgrey;
+            width: 900px;
+            border: 12px solid green;
+            padding: 30px;
+            margin: 10px;
+        }
+        input {
+    font-size: 10px;
+    font-family: sans-serif;
+    padding: 18px 18px;
+    color: white;
+    background-color: red;
+    border:none;    
+    border-radius: 10px;
+    /* padding: 2px 5px; */
+    cursor: pointer;
+}
+    </style>
+
+    <body>
+        <a href="./mysqlhome.html"><input type="button" value="BACK"></a>
+
+        <h2>MySQL INSERT INTO Statement </h2>
+        <p>The INSERT INTO statement is used to insert new records in a table.
+        </p>
+        <div>
+            <h4>SYNTAX</h4>
+            INSERT INTO table_name (column1, column2, column3, ...) <br>
+            VALUES (value1, value2, value3, ...);
+                <h4> EXAMPLE</h4>
+                INSERT INTO People VALUES  <br>
+                (102, 'Joseph', 'Developer', 30),  <br>
+                (103, 'Mike', 'Leader', 28),  <br>
+                (104, 'Stephen', 'Scientist', 45);  <br>
+                <h4>OUTPUT</h4>
+                <img src="/images/INSERT.png" >
+
+        <h2> MySQL UPDATE Statement</h2>
+        <p>The UPDATE statement is used to modify the existing records in a table.  <br>
+            The WHERE clause specifies which record(s) that should be updated. If you omit the WHERE clause, all records in the table will be updated!
+
+        </p>
+        <div>
+            <h4>SYNTAX</h4>
+          UPDATE table_name <br>
+SET column1 = value1, column2 = value2, ... <br>
+WHERE condition;<br>
+                <h4> EXAMPLE</h4>
+                UPDATE Customers <br>
+                SET ContactName = 'Alfred Schmidt', City = 'Frankfurt' <br>
+                WHERE CustomerID = 1; <br>
+
+                <h4>OUTPUT</h4>
+                <img src="/images/update.png" >
+               
+        </div>
+
+        <h2> MySQL DELETE Statement</h2>
+        <p>The DELETE statement is used to delete existing records in a table. <br>
+            The WHERE clause specifies which record(s) should be deleted. If you omit the WHERE clause, all records in the table will be deleted! <br>
+
+        </p>
+        <div>
+            <h4>SYNTAX</h4>
+          DELETE FROM table_name WHERE condition;
+                <h4> EXAMPLE</h4>
+                DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
+
+                <h4>OUTPUT</h4>
+
+                <img src="" alt="">
+        </div>
+    </body>
+</html>

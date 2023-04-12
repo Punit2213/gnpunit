@@ -1,0 +1,112 @@
+<html>
+<body>
+    
+    <style>
+        div {
+            background-color: lightgrey;
+            width: 700px;
+            border: 12px solid green;
+            padding: 30px;
+            margin: 10px;
+        }
+        input {
+    font-size: 10px;
+    font-family: sans-serif;
+    padding: 18px 18px;
+    color: white;
+    background-color: red;
+    border:none;    
+    border-radius: 10px;
+    /* padding: 2px 5px; */
+    cursor: pointer;
+}
+    </style>
+
+<a href="./mysqlhome.html"><input type="button" value="BACK"></a>
+
+
+<h2>MySQL MIN() Function</h2>
+<p>The MIN() function returns the smallest value of the selected column.
+</p>
+<div>
+    <h4>SYNTAX</h4>
+    SELECT MIN(column_name)<br>
+    FROM table_name<br>
+    WHERE condition;<br>
+        <h4> EXAMPLE</h4>
+        
+        mysql> SELECT MIN(income) AS Minimum_Income FROM employees;
+        
+        <h4>OUTPUT</h4>
+        <img src="/images/min.png" >
+</div>  
+
+  <h2>MySQL MAX() Function</h2>
+<p>The MAX() function returns the largest value of the selected column.<br>
+</p>
+<div>
+    <h4>SYNTAX</h4>
+    SELECT MAX(column_name)<br>
+FROM table_name<br>
+WHERE condition;<br>
+
+
+        <h4> EXAMPLE</h4>
+     
+        mysql> SELECT MAX(income) AS "Maximum Income" FROM employees;  
+
+        <h4>OUTPUT</h4>
+        <img src="/images/max.png">
+
+</div>
+
+
+<h2>MySQL COUNT()</h2>
+<p>The COUNT() function returns the number of rows that matches a specified criterion.
+</p>
+<div>
+    <h4>SYNTAX</h4>
+    SELECT COUNT(column_name)<br>
+    FROM table_name<br>
+    WHERE condition;<br>
+        <h4> EXAMPLE</h4>
+       
+        mysql> SELECT COUNT(emp_name) FROM employees;    
+
+        <h4>OUTPUT</h4>
+<img src="/images/COUNT.png" alt="">
+
+</div>
+
+<h2>AVG()</h2>
+<p>The AVG() function returns the average value of a numeric column. 
+</p>
+<div>
+    <h4>SYNTAX</h4>
+    SELECT AVG(column_name)<br>
+    FROM table_name<br>
+    WHERE condition;<br>
+        <h4> EXAMPLE</h4>
+        mysql> SELECT AVG(working_hours) Avg_working_hours FROM employees;  <br>
+
+        <h4>OUTPUT</h4>
+        <img src="/images/avf.png" >
+</div>   
+   <h2>SUM()</h2>
+<p>The SUM() function returns the total sum of a numeric column.
+</p>
+<div>
+    <h4>SYNTAX</h4>
+    SELECT SUM(column_name)<br>
+    FROM table_name<br>
+    WHERE condition;
+        <h4> EXAMPLE</h4>
+        
+        mysql> SELECT SUM(working_hours) AS "Total working hours" FROM employees WHERE working_hours>=12;
+         <h4>OUTPUT</h4>
+         <img src="/images/sum.png" >
+</div> 
+
+
+</body>
+</html> 

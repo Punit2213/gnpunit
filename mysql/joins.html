@@ -1,0 +1,111 @@
+<html>
+    <style>
+        div {
+            background-color: lightgrey;
+            width: 300px;
+            border: 12px solid green;
+            padding: 30px;
+            margin: 10px;
+        }
+        input {
+    font-size: 10px;
+    font-family: sans-serif;
+    padding: 18px 18px;
+    color: white;
+    background-color: red;
+    border:none;    
+    border-radius: 10px;
+    /* padding: 2px 5px; */
+    cursor: pointer;
+}
+    </style>
+
+    <body>
+        <a href="./mysqlhome.html"><input type="button" value="BACK"></a>
+
+        <h2>MySQL INNER JOIN Keyword</h2>
+        <p>The INNER JOIN keyword selects records that have matching values in both tables. <br>
+            The INNER JOIN keyword selects all rows from both tables as long as there is a match between the columns. 
+             <br>  If there are records in the "Orders" table that do not have matches in "Customers", these orders will not be shown!
+
+
+        </p>
+        <div>
+            <h4>SYNTAX</h4>
+            SELECT column_name(s) <br>
+            FROM table1 <br>
+            INNER JOIN table2 <br>
+            ON table1.column_name = table2.column_name; <br>
+                <h4> EXAMPLE</h4>
+                SELECT Orders.OrderID, Customers.CustomerName <br>
+                FROM Orders <br>
+                INNER JOIN Customers ON Orders.CustomerID = Customers.CustomerID; <br>
+        </div>     
+        
+        <h2>MySQL LEFT JOIN Keyword</h2>
+        <p>The LEFT JOIN keyword returns all records from the left table (table1), and the matching records (if any) from the right table (table2).
+        </p>
+        <div>
+            <h4>SYNTAX</h4>
+            SELECT column_name(s) <br>
+            FROM table1<br>
+            LEFT JOIN table2<br>
+            ON table1.column_name = table2.column_name;<br>
+            
+                <h4> EXAMPLE</h4>
+                SELECT Customers.CustomerName, Orders.OrderID<br>
+                FROM Customers<br>
+                LEFT JOIN Orders ON Customers.CustomerID = Orders.CustomerID<br>
+                ORDER BY Customers.CustomerName;<br>
+        </div>   
+        
+        <h2>MySQL RIGHT JOIN Keyword</h2>
+        <p>The RIGHT JOIN keyword returns all records from the right table (table2), and the matching records (if any) from the left table (table1).
+
+
+        </p>
+        <div>
+            <h4>SYNTAX</h4>
+        
+            SELECT column_name(s)<br>
+            FROM table1<br>
+            RIGHT JOIN table2<br>
+            ON table1.column_name = table2.column_name;
+                <h4> EXAMPLE</h4>
+                SELECT Orders.OrderID, Employees.LastName, Employees.FirstName<br>
+                FROM Orders<br>
+                RIGHT JOIN Employees ON Orders.EmployeeID = Employees.EmployeeID<br>
+                ORDER BY Orders.OrderID;<br>
+        </div>    
+        
+        <h2>MySQL CROSS JOIN Keyword</h2>
+        <p>The CROSS JOIN keyword returns all records from both tables (table1 and table2).
+        </p>
+        <div>
+            <h4>SYNTAX</h4>
+            SELECT column_name(s)<br>
+            FROM table1<br>
+            CROSS JOIN table2;
+                <h4> EXAMPLE</h4>
+                SELECT Customers.CustomerName, Orders.OrderID<br>
+                FROM Customers<br>
+                CROSS JOIN Orders;<br>
+        </div>
+        <h2>MySQL Self Join</h2>
+        <p>A self join is a regular join, but the table is joined with itself.<br>
+        </p>
+        <div>
+            <h4>SYNTAX</h4>
+            SELECT column_name(s)<br>
+            FROM table1 T1, table1 T2<br>
+            WHERE condition;<br>
+                <h4> EXAMPLE</h4>
+                SELECT A.CustomerName AS CustomerName1, B.CustomerName AS CustomerName2, A.City<br>
+                FROM Customers A, Customers B<br>
+                WHERE A.CustomerID <> B.CustomerID<br>
+                AND A.City = B.City<br>
+                ORDER BY A.City;<br>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,131 @@
+<html>
+<body>
+    
+    <style>
+        div {
+            background-color: lightgrey;
+            width: 700px;
+            border: 12px solid green;
+            padding: 30px;
+            margin: 10px;
+        }
+        input {
+    font-size: 10px;
+    font-family: sans-serif;
+    padding: 18px 18px;
+    color: white;
+    background-color: red;
+    border:none;    
+    border-radius: 10px;
+    /* padding: 2px 5px; */
+    cursor: pointer;
+}
+    </style>
+       <a href="./mysqlhome.html"><input type="button" value="BACK"></a>
+
+         <h2>MySQL NOT NULL Constraint</h2>
+         <p>By default, a column can hold NULL values. <br>
+
+            The NOT NULL constraint enforces a column to NOT accept NULL values.<br>
+            
+            This enforces a field to always contain a value, which means that you cannot insert a new record, or update a record without adding a value to this field.<br>
+            
+            
+         </p>
+         <div>
+            
+         
+                 <h4> EXAMPLE</h4>
+                 CREATE TABLE Persons (<br>
+                    ID int NOT NULL,<br>
+                    LastName varchar(255) NOT NULL,<br>
+                    FirstName varchar(255) NOT NULL,<br>
+                    Age int<br>
+                );<br>
+                <h4>OUTPUT</h4>
+                <img src="/images/null.png" alt="">
+         </div>
+         <h2>MySQL UNIQUE Constraint</h2>
+         <p>The UNIQUE constraint ensures that all values in a column are different.<br>
+
+            Both the UNIQUE and PRIMARY KEY constraints provide a guarantee for uniqueness for a column or set of columns.<br>
+            
+            A PRIMARY KEY constraint automatically has a UNIQUE constraint.<br>
+            
+            However, you can have many UNIQUE constraints per table, but only one PRIMARY KEY constraint per table.<br>
+            
+            
+         </p>
+         <div>
+          
+                 <h4> EXAMPLE</h4>
+                 CREATE TABLE Persons (<br>
+                    ID int NOT NULL,<br>
+                    LastName varchar(255) NOT NULL,<br>
+                    FirstName varchar(255),<br>
+                    Age int,<br>
+                    UNIQUE (ID)<br>
+                );
+                <h4>OUTPUT</h4>
+                <img src="/images/unique.png" alt="">
+         </div> 
+         <h2>MySQL PRIMARY KEY Constraint</h2>
+         <p>The PRIMARY KEY constraint uniquely identifies each record in a table.<br>
+
+            Primary keys must contain UNIQUE values, and cannot contain NULL values.
+            
+            A table can have only ONE primary key; and in the table, this primary key can consist of single or multiple columns (fields).
+         </p>
+         <div>
+         
+                 <h4> EXAMPLE</h4>
+                 CREATE TABLE Persons (<br>
+                    ID int NOT NULL,<br>
+                    LastName varchar(255) NOT NULL,<br>
+                    FirstName varchar(255),<br>
+                    Age int,<br>
+                    PRIMARY KEY (ID)<br>
+                );
+                <h4>OUTPUT</h4>
+                <img src="/images/primary.png" alt="">
+         </div>
+          <h2>MySQL FOREIGN KEY Constraint</h2>
+         <p>The FOREIGN KEY constraint is used to prevent actions that would destroy links between tables.<br>
+
+            A FOREIGN KEY is a field (or collection of fields) in one table, that refers to the PRIMARY KEY in another table.
+            
+            The table with the foreign key is called the child table, and the table with the primary key is called the referenced or parent table.
+         </p>
+         <div>
+         
+                 <h4> EXAMPLE</h4>
+                 CREATE TABLE Orders (<br>
+                    OrderID int NOT NULL,<br>
+                    OrderNumber int NOT NULL,<br>
+                    PersonID int,<br>
+                    PRIMARY KEY (OrderID),<br>
+                    FOREIGN KEY (PersonID) REFERENCES Persons(PersonID)<br>
+                );
+                <h4>OUTPUT</h4>
+               
+         </div> 
+         <h2>MySQL CHECK Constraint</h2>
+         <p>The CHECK constraint is used to limit the value range that can be placed in a column.
+
+            <br>If you define a CHECK constraint on a column it will allow only certain values for this column.
+            
+            If you define a CHECK constraint on a table it can limit the values in certain columns based on values in other columns in the row.
+         </p>
+         <div>
+         
+                 <h4> EXAMPLE</h4>
+                 CREATE TABLE Persons (<br>
+                    ID int NOT NULL,<br>
+                    LastName varchar(255) NOT NULL,<br>
+                    FirstName varchar(255),<br>
+                    Age int,<br>
+                    CHECK (Age>=18)<br>
+                );
+         </div>
+         
+</body></html>

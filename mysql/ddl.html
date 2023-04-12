@@ -1,0 +1,117 @@
+<html>
+    <style>
+        div {
+            background-color: lightgrey;
+            width: 900px;
+            border: 12px solid green;
+            padding: 30px;
+            margin: 10px;
+        }
+        input {
+    font-size: 10px;
+    font-family: sans-serif;
+    padding: 18px 18px;
+    color: white;
+    background-color: red;
+    border:none;    
+    border-radius: 10px;
+    /* padding: 2px 5px; */
+    cursor: pointer;
+}
+    </style>
+
+    <body>
+        <a href="./mysqlhome.html"><input type="button" value="BACK"></a>
+
+        <h2>THE CREATE TABLE COMMAND </h2>
+        <p>The CREATE TABLE statement is used to create a new table in a database. <br>
+            The column parameters specify the names of the columns of the table.
+
+            The datatype parameter specifies the type of data the column can hold (e.g. varchar, integer, date, etc.).
+        </p>
+        <div>
+            <h4>SYNTAX</h4>
+            CREATE TABLE table_name ( <br>
+            column1 datatype, <br>
+            column2 datatype, <br>
+            column3 datatype, <br>
+            ....
+            );<br>
+            <h4> EXAMPLE</h4>
+            mysql> CREATE TABLE employee_table(<br>  
+    id int NOT NULL AUTO_INCREMENT,  <br>
+    name varchar(45) NOT NULL,  <br>
+    occupation varchar(35) NOT NULL,  <br>
+    age int NOT NULL,  <br>
+    PRIMARY KEY (id)  <br>
+);  <br>
+<h4>OUTPUT</h4>
+<img src="/images/craetetb.png" alt="">
+
+        </div>
+
+
+
+        <h2>The MySQL DROP TABLE Statement</h2>
+        <p>The DROP TABLE statement is used to drop an existing table in a database. <br>
+            Be careful before dropping a table. Deleting a table will result in loss of complete information stored in
+            the table
+        </p>
+        <div>
+            <h4>SYNTAX</h4>
+            DROP TABLE table_name;
+            <h4> EXAMPLE</h4>
+            DROP TABLE orders;
+<br>
+<br>
+<h4>OUTPUT</h4>
+            <img src="/images/drop.png" alt="">
+        </div>
+
+        <h2>MySQL TRUNCATE TABLE</h2>
+        <p>The TRUNCATE TABLE statement is used to delete the data inside a table, but not the table itself.</p>
+        <div>
+            <h4>SYNTAX</h4>
+            TRUNCATE TABLE table_name;
+            <h4> EXAMPLE</h4>
+            TRUNCATE TABLE customers; <br>
+<h4>OUTPUT</h4>
+            <img src="/images/truncate2.png" > <br>
+            <br>
+            <img src="/images/truncat1.png" >
+        </div>
+
+        <h2>MySQL ALTER TABLE Statement</h2>
+        <p>The ALTER TABLE statement is used to add, delete, or modify columns in an existing table.
+            The ALTER TABLE statement is also used to add and drop various constraints on an existing table.</p>
+        <div>
+            <h4>SYNTAX</h4>
+            1.. ALTER TABLE - ADD Column <br>
+            To add a column in a table, use the following syntax: <br>
+
+            ALTER TABLE table_name
+            ADD column_name datatype; <br>
+            2..ALTER TABLE - DROP COLUMN
+            To delete a column in a table, use the following syntax: <br>
+            ALTER TABLE table_name <br>
+            DROP COLUMN column_name;
+
+            <h4> EXAMPLE</h4>
+
+            1..ALTER TABLE Customers <br>
+            ADD Email varchar(255); <br>
+            2..ALTER TABLE Customers <br>
+            DROP COLUMN Email; <br>
+
+<br>
+<h4>OUTPUT</h4>
+            <img src="/images/alter.png" >
+
+        </div>
+
+
+
+
+    </body>
+
+    </html>
