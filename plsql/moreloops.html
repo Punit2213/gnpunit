@@ -1,0 +1,86 @@
+<html>
+
+<body>
+
+    <style>
+        div {
+            background-color: lightgrey;
+            width: 900px;
+            border: 12px solid green;
+            padding: 30px;
+            margin: 10px;
+        }
+
+        input {
+            font-size: 17px;
+            font-family: sans-serif;
+            padding: 18px 18px;
+            color: white;
+            background-color: red;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+    </style>
+    <a href="./plsqlhome.html"><input type="button" value="PLSQL"></a>
+    <a href="./loopst.html"><input type="button" value="BACK"></a>
+
+    <h4>PL/SQL FOR Loop</h4>
+    <p>PL/SQL for loop is used when when you want to execute a set of statements for a predetermined number of times. The loop is iterated between the start and end integer values. The counter is always incremented by 1 and once the counter reaches the value of end integer, the loop ends.</p>
+
+    <div>
+        <h4>SYNTAX</h4>
+        <p>FOR counter IN initial_value .. final_value LOOP  <br>
+            LOOP statements;   <br>
+          END LOOP; <br>
+          initial_value : Start integer value<br>
+          final_value : End integer value </p>
+
+          <h4>EXAMPLE</h4>
+          <p>DECLARE   <br>
+            VAR1 NUMBER;  <br>
+            BEGIN   <br>
+            VAR1:=10;  <br>
+            FOR VAR2 IN 1..10  <br>
+            LOOP  <br>
+            DBMS_OUTPUT.PUT_LINE (VAR1*VAR2);<br>  
+            END LOOP;  <br>
+            END;  </p>
+
+            <h4>OUTPUT</h4>
+            <img src="/images/for.png" alt="">
+
+
+    </div>
+
+    <h4>
+   
+        PL/SQL GOTO STATEMENT</h4>
+        <p>In PL/SQL, GOTO statement makes you able to get an unconditional jump from the GOTO to a specific executable statement label in the same subprogram of the PL/SQL block.</p>
+<div>
+    <h4>SYNTAX</h4>
+    <p>GOTO label_name; </p>
+    <h4>EXAMPLE</h4>
+    <p>DECLARE  <br>
+        a number(2) := 30; <br> 
+     BEGIN  <br>
+        <<loopstart>>  <br>
+        -- while loop execution<br>   
+        WHILE a < 50 LOOP  <br>
+           dbms_output.put_line ('value of a: ' || a); <br> 
+           a := a + 1;  <br>
+           IF a = 35 THEN  <br>
+              a := a + 1;  <br>
+              GOTO loopstart; <br> 
+           END IF;  <br>
+        END LOOP;  <br>
+     END;  <br>
+     /  </p>
+
+     <h4>OUTPUT</h4>
+     <img src="/images/goto.png" >
+</div>
+
+<br>
+</body></html>

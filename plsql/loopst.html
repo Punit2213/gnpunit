@@ -1,0 +1,104 @@
+<html>
+
+<body>
+
+    <style>
+        div {
+            background-color: lightgrey;
+            width: 900px;
+            border: 12px solid green;
+            padding: 30px;
+            margin: 10px;
+        }
+
+        input {
+            font-size: 17px;
+            font-family: sans-serif;
+            padding: 18px 18px;
+            color: white;
+            background-color: red;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+    </style>
+    <a href="./plsqlhome.html"><input type="button" value="BACK"></a>
+    <a href="./moreloops.html"><input type="button" value="MORE LOOPS" a></a>
+    
+    <h2>PL/SQL If</h2>
+    <p>PL/SQL supports the programming language features like conditional statements and iterative statements. Its programming constructs are similar to how you use in programming languages like Java and C++.</p>
+    <div>
+        <h4>Syntax for IF Statement:</h4>
+        <p>IF condition   <br>
+            THEN   <br>
+            Statement: {It is executed when condition is true}  <br>
+            END IF;  </p>
+
+            <h4>EXAMPLE</h4>
+            <p>DECLARE  <br>
+                a number(3) := 500;  <br>
+             BEGIN  <br>
+                -- check the boolean condition using if statement  <br>
+                IF( a < 20 ) THEN <br> 
+                   -- if condition is true then print the following <br>   
+                   dbms_output.put_line('a is less than 20 ' );  <br>
+                ELSE  <br>
+                   dbms_output.put_line('a is not less than 20 ' ); <br> 
+                END IF;  <br>
+                dbms_output.put_line('value of a is : ' || a);<br>  
+             END;  </p>
+
+             <h4>OUTPUT</h4>
+             <img src="/images/ifeg.png">
+
+             <hr>
+
+
+        <h4>IF-THEN-ELSE statement</h4>
+        <p>This syntax is used when you want to execute one set of statements when condition is TRUE or a different set of statements when condition is FALSE.</p>
+
+
+        <p>IF condition<br>   
+            THEN  <br>
+               {...statements to execute when condition is TRUE...}  <br>
+            ELSE  <br>
+               {...statements to execute when condition is FALSE...}  <br>
+            END IF;    </p>
+
+            <h4>IF-THEN-ELSIF statement</h4>
+            <h6></h6>
+            <p>IF condition1 <br>  
+                THEN  <br>
+                   {...statements to execute when condition1 is TRUE...}  <br>
+                ELSIF condition2  <br> 
+                THEN  <br>
+                   {...statements to execute when condition2 is TRUE...} <br> 
+                END IF;  </p>
+
+                <h4></h4>
+    </div>
+
+    <h2>PL/SQL While Loop</h2>
+    <p>PL/SQL while loop is used when a set of statements has to be executed as long as a condition is true, the While loop is used. The condition is decided at the beginning of each iteration and continues until the condition becomes false.</p>
+
+    <div>
+        <h4>SYNTAX</h4>
+        <p>WHILE (condition)   <br>
+            LOOP statements;   <br>
+           END LOOP;  </p>
+           <h4>EXAMPLE</h4>
+           <p>DECLARE<br>  
+            i INTEGER := 1; <br> 
+            BEGIN  <br>
+            WHILE i <= 10 LOOP  <br>
+            DBMS_OUTPUT.PUT_LINE(i); <br> 
+            i := i+1;<br>
+            END LOOP; <br> 
+            END; </p>
+
+            <h4>OUTPUT</h4>
+            <img src="/images/while.png" >
+
+            
+    </div>

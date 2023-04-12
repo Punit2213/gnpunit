@@ -1,0 +1,105 @@
+<html>
+
+<body>
+
+    <style>
+        div {
+            background-color: lightgrey;
+            width: 900px;
+            border: 12px solid green;
+            padding: 30px;
+            margin: 10px;
+        }
+
+        input {
+            font-size: 10px;
+            font-family: sans-serif;
+            padding: 18px 18px;
+            color: white;
+            background-color: red;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+    <a href="./plsqlhome.html"><input type="button" value="BACK"></a>
+
+    <h2>INTRODUCTION</h2>
+    <p>
+        PL/SQL is a block structured language that enables developers to combine the power of SQL with procedural
+        statements.
+    </p>
+
+    <div>
+        <h4>Basics of PL/SQL</h4>
+        <p>•PL/SQL stands for Procedural Language extensions to the Structured Query Language (SQL).
+            <br> •PL/SQL is a combination of SQL along with the procedural features of programming languages.
+            <br> • Oracle uses a PL/SQL engine to processes the PL/SQL statements.
+            <br> • PL/SQL includes procedural language elements like conditions and loops. It allows declaration of
+            constants and variables, procedures and functions, types and variable of those types and triggers.
+        </p>
+
+
+        <h4>Disadvantages of SQL:</h4>
+        <p>
+            SQL doesn’t provide the programmers with a technique of condition checking, looping and branching. <br>
+            SQL statements are passed to Oracle engine one at a time which increases traffic and decreases speed. <br>
+            SQL has no facility of error checking during manipulation of data. <br>
+
+        </p>
+
+        <h4>
+            Features of PL/SQL:
+        </h4>
+        <p>
+            PL/SQL is basically a procedural language, which provides the functionality of decision making, iteration
+            and many more features of procedural programming languages. <br>
+            PL/SQL can execute a number of queries in one block using single command. <br>
+            One can create a PL/SQL unit such as procedures, functions, packages, triggers, and types, which are stored
+            in the database for reuse by applications. <br>
+            PL/SQL provides a feature to handle the exception which occurs in PL/SQL block known as exception handling
+            block. <br>
+        </p>
+    </div>
+
+    <h2>STRUCTURE OF PLSQL BLOCK</h2>
+    <p>PL/SQL extends SQL by adding constructs found in procedural languages, resulting in a structural language that is more powerful than SQL. The basic unit in PL/SQL is a block. All PL/SQL programs are made up of blocks, which can be nested within</p>
+    <div>
+        <img src="/images/BLOCK.png" >
+        
+            <h4>DECLARE </h4>
+            <p>Declare section starts with DECLARE keyword in which variables, constants, records as cursors can be declared which stores data temporarily. It basically consists definition of PL/SQL identifiers. This part of the code is optional.</p>
+
+            <h4> BEGIN </h4>
+            <p>
+                Execution section starts with BEGIN and ends with END keyword.This is a mandatory section and here the program logic is written to perform any task like loops and conditional statements. It supports all DML commands, DDL commands and SQL*PLUS built-in functions as well.
+            </p>
+
+            <h4>EXCEPTIION</h4>
+            <p>
+                Exception section starts with EXCEPTION keyword.This section is optional which contains statements that are executed when a run-time error occurs. Any exceptions can be handled in this section.
+            </p>
+            
+
+    </div>
+
+    <h2>PL/SQL IDENTIFIERS</h2>
+    <p>There are several PL/SQL identifiers such as variables, constants, procedures, cursors, triggers etc.</p>
+    <div>
+        <h4>VARIABLES</h4>
+        <p> Like several other programming languages, variables in PL/SQL must be declared prior to its use. They should have a valid name and data type as well. Syntax for declaration of variables:</p>
+        <h4>SYNTAX</h4>
+        variable_name datatype [NOT NULL := value ]; <br>
+
+
+        <h4>COMMENTS</h4>
+        <p> Like in many other programming languages, in PL/SQL also, comments can be put within the code which has no effect in the code. There are two syntaxes to create comments in PL/SQL : <br> <br>
+            Single Line Comment: To create a single line comment , the symbol – – is used. <br> <br>
+            Multi Line Comment: To create comments that span over several lines, the symbol /* and */ is used.</p>
+    </div>
+
+
+
+</body>
+
+</html>

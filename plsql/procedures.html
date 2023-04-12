@@ -1,0 +1,71 @@
+<html>
+
+<body>
+
+    <style>
+        div {
+            background-color: lightgrey;
+            width: 900px;
+            border: 12px solid green;
+            padding: 30px;
+            margin: 10px;
+        }
+
+        input {
+            font-size: 17px;
+            font-family: sans-serif;
+            padding: 18px 18px;
+            color: white;
+            background-color: red;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+    </style>
+    <a href="./plsqlhome.html"><input type="button" value="PLSQL"></a>
+
+    <h4>PL/SQL Procedure</h4>
+    <p>The PL/SQL stored procedure or simply a procedure is a PL/SQL block which performs one or more specific tasks. It is just like procedures in other programming languages.</p>
+    <p>The procedure contains a header and a body.
+
+        Header: The header contains the name of the procedure and the parameters or variables passed to the procedure.
+        Body: The body contains a declaration section, execution section and exception section similar to a general PL/SQL block.</p>
+        <div>
+            <h4>PL/SQL Create Procedure</h4>
+            <h4>SYNTAX</h4>
+            <p>CREATE [OR REPLACE] PROCEDURE procedure_name  <br>
+                [ (parameter [,parameter]) ]  <br>
+            IS  <br>
+                [declaration_section]  <br>
+            BEGIN  <br>
+                executable_section  <br>
+            [EXCEPTION  <br>
+                exception_section]  <br>
+            END [procedure_name];  </p>
+
+            <h4>EXAMPLE</h4>
+            <p>create or replace procedure "INSERTUSER" <br>   
+                (id IN NUMBER,    <br>
+                name IN VARCHAR2)    <br>
+                is    <br>
+                begin    <br>
+                insert into user values(id,name); <br>   
+                end;    <br>
+                /       </p>
+
+                <h4>OUTPUT</h4>
+                <img src="/images/procedure.png" >
+        </div>
+
+        <h2>CALL PROCEDURE</h2>
+        <div>
+            <h4>EXAMPLE</h4>
+            <p>BEGIN    <br>
+                insertuser(101,'Rahul');  <br>
+                dbms_output.put_line('record inserted successfully');<br>    
+             END;    <br>
+             /    </p>
+             <br>
+        </div>
+</body></html>
